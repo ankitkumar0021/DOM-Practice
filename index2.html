@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="myh">hello<span><h1>first</h1><h2>Second</h2>myspan</span><label>my label</label><!--this is comment -->ducat india</h1> 
+<script>
+var result=document.getElementById("myh")
+// console.log(result.parentNode);
+// console.log(result.firstChild);
+// console.log(result.lastChild);
+// console.log(result.firstChild.nextSibling);
+// console.log(result.lastChild.previousSibling);
+// console.log(result.children);
+document.write(result.children[0].lastChild);
+console.log(result.children[0].children[1].nodeValue);
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery Image</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="profile.jpg" class="current-image" style="height: 330px;">
+        <button id="prev-button" onclick="prevImage">prev</button>
+        <button id="next-button" onclick="nextImage">next</button>
+    </div>
+
+    <script>
+
+        var images = ["profile.jpg","profile1.jpg","profile2.jpg","profile3.jpg"];
+        var currentImageIndex = 0;
+
+        function prevImage(){
+            if(currentImageIndex === 0){
+                currentImageIndex = images.length-1;
+            }else{
+                currentImageIndex--;
+            }
+            document.getElementById("current-image").src = images[currentImageIndex];
+            function nextImage() {
+  if (currentImageIndex === images.length - 1) {
+    currentImageIndex = 0;
+  } else {
+    currentImageIndex++;
+  }
+  document.getElementById("current-image").src = images[currentImageIndex];
+}
+        }
+    </script>
+</body>
+</html>
